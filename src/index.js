@@ -1,12 +1,27 @@
 const library = (function(){
-    const createProject = function(name) {
+    const _createProject = function(name) {
         return {name, todos: []};
     }
 
-    const createTodo = function(title, description, dueDate, priority,
-                 dateCreated) {
-        return {title, description, dueDate, priority, dateCreated};
+    const _createTodo = function(title, description, dueDate, priority,) {
+        return {title, description, dueDate, priority};
     }
 
-    return {createTodo, createProject,};
+    const _defaultProject = createProject('default');
+    const _projects = [defaultProject];
+
+    const addProject = function() {
+
+    }
+    const deleteProject = function() {
+
+    }
+    const addTodo = function() {
+
+    }
+    const deleteTodo = function() {
+
+    }
+
+    return {};
 })()
