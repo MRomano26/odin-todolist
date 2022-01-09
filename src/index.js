@@ -7,8 +7,12 @@ const library = (function(){
         return {title, description, dueDate, priority};
     }
 
-    const _defaultProject = createProject('default');
-    const _projects = [defaultProject];
+    const _defaultProject = _createProject('default');
+    const _projects = window.localStorage;
+
+    if (_projects.length === 0) {
+        _projects.setItem(_defaultProject.name, _defaultProject);
+    }
 
     const addProject = function() {
 
@@ -23,5 +27,5 @@ const library = (function(){
 
     }
 
-    return {};
-})()
+    return {test: _projects};
+})();
